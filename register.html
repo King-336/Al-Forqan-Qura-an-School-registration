@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Al-Forqan Quran School – Student Registration Form" />
+  <title>Student Registration – Al-Forqan Quran School</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="form-page">
+
+  <!-- ===== Header ===== -->
+  <header>
+    <div class="nav-inner">
+      <a href="index.html" class="brand" style="text-decoration:none;">
+        <span class="brand-icon">☪</span>
+        Al-Forqan Quran School
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#programs">Programs</a>
+        <a href="index.html#about">About</a>
+        <a href="register.html" class="active">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Form Container ===== -->
+  <div style="padding: 1.5rem 1rem 3rem;">
+    <div class="form-container">
+
+      <!-- Form header -->
+      <div class="form-header">
+        <span class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</span>
+        <h2>Student Registration Form</h2>
+        <p>Please complete all required fields. Our team will confirm your enrollment within 2 working days.</p>
+      </div>
+
+      <!-- Success banner (hidden until submission) -->
+      <div id="success-banner" role="alert" aria-live="polite">
+        <div class="success-icon">✅</div>
+        <h3>Registration Submitted Successfully!</h3>
+        <p>Jazāk Allāhu Khayran. We have received your registration and will be in touch shortly.</p>
+        <p>Your registration reference:<br/>
+          <span class="reg-id" id="generated-reg-id"></span>
+        </p>
+        <p style="margin-top:0.8rem;">
+          <a href="index.html">← Return to Home</a>
+        </p>
+      </div>
+
+      <!-- Registration form -->
+      <form id="registration-form" novalidate>
+        <div class="form-body">
+
+          <!-- Section: Student Information -->
+          <h3 class="form-section-title">Student Information</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="studentNameAr">Full Name (Arabic) <span class="req">*</span></label>
+              <input
+                type="text"
+                id="studentNameAr"
+                name="studentNameAr"
+                placeholder="الاسم الكامل"
+                dir="auto"
+                autocomplete="name"
+                required
+              />
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="studentNameEn">Full Name (English) <span class="req">*</span></label>
+              <input
+                type="text"
+                id="studentNameEn"
+                name="studentNameEn"
+                placeholder="e.g. Ahmed Abdullah"
+                autocomplete="name"
+                required
+              />
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="dateOfBirth">Date of Birth <span class="req">*</span></label>
+              <input
+                type="date"
+                id="dateOfBirth"
+                name="dateOfBirth"
+                required
+              />
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="gender">Gender <span class="req">*</span></label>
+              <select id="gender" name="gender" required>
+                <option value="">-- Select --</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <!-- Section: Parent / Guardian -->
+          <h3 class="form-section-title">Parent / Guardian Information</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="guardianName">Full Name <span class="req">*</span></label>
+              <input
+                type="text"
+                id="guardianName"
+                name="guardianName"
+                placeholder="Parent or guardian name"
+                autocomplete="name"
+                required
+              />
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="guardianRelation">Relationship to Student <span class="req">*</span></label>
+              <select id="guardianRelation" name="guardianRelation" required>
+                <option value="">-- Select --</option>
+                <option value="father">Father</option>
+                <option value="mother">Mother</option>
+                <option value="sibling">Sibling</option>
+                <option value="self">Self (adult student)</option>
+                <option value="other">Other</option>
+              </select>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="guardianPhone">Phone Number <span class="req">*</span></label>
+              <input
+                type="tel"
+                id="guardianPhone"
+                name="guardianPhone"
+                placeholder="+1 234 567 8900"
+                autocomplete="tel"
+                required
+              />
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="guardianEmail">Email Address</label>
+              <input
+                type="email"
+                id="guardianEmail"
+                name="guardianEmail"
+                placeholder="email@example.com"
+                autocomplete="email"
+              />
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Home Address / City</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              placeholder="City or full address"
+              autocomplete="address-level2"
+            />
+          </div>
+
+          <!-- Section: Program Selection -->
+          <h3 class="form-section-title">Program Selection</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="quranLevel">Current Quran Level <span class="req">*</span></label>
+              <select id="quranLevel" name="quranLevel" required>
+                <option value="">-- Select --</option>
+                <option value="complete-beginner">Complete Beginner (no Arabic)</option>
+                <option value="noorani-qaida">Noorani Qaida (learning letters)</option>
+                <option value="reading">Can read Quran with Tajweed help</option>
+                <option value="reading-fluent">Reads fluently, wants to improve Tajweed</option>
+                <option value="hifz-partial">Memorised some Juz (partial Hifz)</option>
+                <option value="hifz-full">Seeks full Hifz program</option>
+              </select>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="preferredTime">Preferred Schedule <span class="req">*</span></label>
+              <select id="preferredTime" name="preferredTime" required>
+                <option value="">-- Select --</option>
+                <option value="weekday-morning">Weekday Mornings</option>
+                <option value="weekday-evening">Weekday Evenings</option>
+                <option value="weekend-morning">Weekend Mornings</option>
+                <option value="weekend-afternoon">Weekend Afternoons</option>
+                <option value="weekend-evening">Weekend Evenings</option>
+              </select>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <!-- Section: Additional Notes -->
+          <h3 class="form-section-title">Additional Information</h3>
+
+          <div class="form-group">
+            <label for="specialNeeds">Special Needs or Medical Conditions</label>
+            <textarea
+              id="specialNeeds"
+              name="specialNeeds"
+              placeholder="Please describe any special educational, medical, or accessibility needs that may help us support your child better."
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="heardFrom">How did you hear about us?</label>
+            <select id="heardFrom" name="heardFrom">
+              <option value="">-- Select --</option>
+              <option value="friend">Friend or Family</option>
+              <option value="masjid">Masjid Announcement</option>
+              <option value="social-media">Social Media</option>
+              <option value="flyer">Flyer / Poster</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+        </div><!-- /.form-body -->
+
+        <!-- Form footer -->
+        <div class="form-footer" id="form-footer">
+          <span class="note"><span class="req">*</span> Required fields</span>
+          <button type="submit" class="btn-submit">Submit Registration →</button>
+        </div>
+
+      </form><!-- /#registration-form -->
+
+    </div><!-- /.form-container -->
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>&copy; <span id="year"></span> <strong>Al-Forqan Quran School</strong> — All rights reserved.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Al-Forqan Quran School – organized Quran education and student enrollment." />
+  <title>Al-Forqan Quran School</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header>
+    <div class="nav-inner">
+      <span class="brand">
+        <span class="brand-icon">☪</span>
+        Al-Forqan Quran School
+      </span>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="#programs">Programs</a>
+        <a href="#about">About</a>
+        <a href="register.html">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <p class="hero-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+    <h1>Welcome to Al-Forqan Quran School</h1>
+    <p>
+      Dedicated to facilitating organized Quran education and student enrollment
+      in a structured and secure manner — for learners of all ages.
+    </p>
+    <a href="register.html" class="btn-primary">Enroll Now &rarr;</a>
+  </section>
+
+  <!-- ===== Features ===== -->
+  <section class="section bg-light">
+    <div class="section-inner">
+      <h2 class="section-title">Why Al-Forqan?</h2>
+      <p class="section-subtitle">A nurturing environment built on knowledge, respect, and community.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">📖</div>
+          <h3>Qualified Instructors</h3>
+          <p>Our teachers hold Ijazah (chain of narration) in Tajweed and Hifz.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🕌</div>
+          <h3>Structured Curriculum</h3>
+          <p>Step-by-step programs from Noorani Qaida to full Hifz al-Quran.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">👨‍👩‍👧‍👦</div>
+          <h3>All Ages Welcome</h3>
+          <p>Dedicated classes for children, youth, sisters, and adults.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔒</div>
+          <h3>Safe Environment</h3>
+          <p>Student data is handled with care; enrollment is simple and secure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Programs ===== -->
+  <section class="section" id="programs">
+    <div class="section-inner">
+      <h2 class="section-title">Our Programs</h2>
+      <p class="section-subtitle">Choose the program that fits your level and schedule.</p>
+      <table class="programs-table">
+        <thead>
+          <tr>
+            <th>Program</th>
+            <th>Age Group</th>
+            <th>Duration</th>
+            <th>Schedule</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Noorani Qaida (Beginners)</td>
+            <td>4 – 10 years</td>
+            <td>3 months</td>
+            <td>Weekday mornings &amp; evenings</td>
+          </tr>
+          <tr>
+            <td>Tajweed &amp; Recitation</td>
+            <td>All ages</td>
+            <td>6 months</td>
+            <td>Weekday mornings &amp; evenings</td>
+          </tr>
+          <tr>
+            <td>Quran Memorisation (Hifz)</td>
+            <td>7 – 18 years</td>
+            <td>Ongoing</td>
+            <td>Weekday mornings</td>
+          </tr>
+          <tr>
+            <td>Sisters' Quran Circle</td>
+            <td>18+ years</td>
+            <td>Ongoing</td>
+            <td>Weekend afternoons</td>
+          </tr>
+          <tr>
+            <td>Adult Beginners</td>
+            <td>18+ years</td>
+            <td>3 months</td>
+            <td>Weekend mornings &amp; evenings</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="section bg-light" id="about">
+    <div class="section-inner" style="max-width:720px;">
+      <h2 class="section-title">About the School</h2>
+      <p class="section-subtitle">As-salāmu ʿalaykum wa rahmatullāhi wa barakātuh</p>
+      <p style="text-align:center; color: var(--text-mid); margin-bottom:1rem;">
+        Al-Forqan Quran School was established with the mission of making quality
+        Quranic education accessible to every Muslim in our community. Our dedicated
+        teachers guide students from the very first letters of the Arabic alphabet
+        through to the completion of Hifz (full memorisation of the Quran).
+      </p>
+      <p style="text-align:center; color: var(--text-mid);">
+        Enrollment is open throughout the year. Fill in the registration form and
+        our admissions team will contact you within 2 working days to confirm your
+        place and class assignment.
+      </p>
+      <div class="text-center mt-1">
+        <a href="register.html" class="btn-primary">Register Your Student</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>&copy; <span id="year"></span> <strong>Al-Forqan Quran School</strong> — All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
